@@ -1,0 +1,7 @@
+.navbar{
+    position: relative ! important;
+}
+
+.clickable{
+    cursor: pointer;
+}

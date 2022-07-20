@@ -1,0 +1,34 @@
+.airline-logo {
+    height: 1.7rem;
+    
+}
+body{
+    background-color: #9b9797;
+}
+
+span{
+    font-weight: 400;
+}
+#row {
+    background-color: beige;
+}
+
+
+.title{
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
+}
+.desc {
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
+}
+.class-info{
+    color: #ADEFD1FF;
+}
+.flight-name{
+    color: #ADEFD1FF;
+
+}
+.fa-plane {
+    margin-left: 10px;
+}

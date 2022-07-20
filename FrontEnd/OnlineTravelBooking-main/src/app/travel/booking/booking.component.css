@@ -1,0 +1,21 @@
+mat-card{
+    width: 100%;
+    background-image: url(../../../assets/images/takeoff.gif);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: right;
+    /* background-color: #4186ff; */
+}
+
+.mat-card {
+    color: #0a0e14;
+    font-weight: bold;
+}
+
+.mat-card-subtitle{
+    font-weight: 600;
+}
+
+img {
+    margin-left: 1rem;
+}

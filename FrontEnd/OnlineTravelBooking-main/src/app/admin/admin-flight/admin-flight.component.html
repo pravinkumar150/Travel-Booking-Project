@@ -1,0 +1,50 @@
+<div class="container">
+    <div>
+      <button mat-raised-button color="primary" class="mt-3" routerLink="/admin/flight/add">Add Flight</button>
+    </div>
+  
+    <div class=" mt-3">
+      <table datatable [dtOptions]="dtOptions" class="row-border hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Airline</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Departure Date</th>
+            <th>Departure Time</th>
+            <th>Arrival Date</th>
+            <th>Booked Seats</th>  
+            <th>Price</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+  
+          <tr *ngFor="let flight of flights">
+            <td> <img class="airline-logo" src={{flight.flightLogoUrl}}></td>
+            <td>{{flight.flightName}}</td>
+            <td>{{flight.flightSource}}</td>
+            <td>{{flight.flightDestination}}</td>
+            <td>{{flight.flightDepartureDate | date:"dd/mm/yyyy"}}</td>
+            <td>{{flight.flightDepartureDate | date:"hh:mm:ss"}}</td>
+            <td>{{flight.flightArrivalDate  | date:"dd/mm/yyyy"}}</td>
+            <td>{{flight.flightBookedSeats}}</td>
+            <td>&#8377;{{flight.flightFare}}</td>
+            <td>
+              <button mat-raised-button color="warn" (click)="delete(flight.flightId)">Delete</button>
+            </td>
+            <!-- <td>
+              <button mat-raised-button color="accent"  (click)="update(flight.flightId)" >Update</button>
+            </td> -->
+          </tr>
+  
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
+
+
+  

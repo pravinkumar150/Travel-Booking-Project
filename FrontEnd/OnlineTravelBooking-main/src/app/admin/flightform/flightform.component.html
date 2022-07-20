@@ -1,0 +1,131 @@
+<div class="container mt-2">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mt-4 mb-5">
+        <mat-card>
+          <div class="container text-center">
+            <mat-icon>flight</mat-icon>
+          </div>
+          <h3 class="text-center">Add Flight Details</h3>
+          <form (ngSubmit)="onFormSubmit()" [formGroup]="reactiveForm" class="mt-4">
+  
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input formControlName="flightName" name="flightName" matInput placeholder="Flight Name">
+              <mat-error *ngIf="f['flightName'].errors && f['flightName'].errors['required']">Please enter Flight Name</mat-error>
+            </mat-form-field>
+            
+            <!-- row 1 starts -->
+            <div class="row mt-2">
+              <!-- col 1 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Source</mat-label>
+                  <input formControlName="flightSource" name="flightSource" matInput placeholder="Enter Source">
+                  <mat-error *ngIf="f['flightSource'].errors && f['flightSource'].errors['required'] ">Please enter source
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <!-- col 2 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Destination</mat-label>
+                  <input formControlName="flightDestination" name="flightDestination" matInput placeholder="Enter Destination">
+                  <mat-error *ngIf="f['flightDestination'].errors && f['flightDestination'].errors['required']">Please enter destination
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+            </div><!-- </div> row 1 ends -->
+  
+  
+            <!-- row 2 starts -->
+            <div class="row mt-2">
+              <!-- col 1 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Departure DateTime</mat-label>
+                  <input formControlName="flightDepartureDate" name="flightDepartureDate" matInput placeholder="Enter Departure DateTime">
+                  <mat-error *ngIf="f['flightDepartureDate'].errors && f['flightDepartureDate'].errors['required'] ">Please enter departure datetime
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <!-- col 2 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Arrival DateTime</mat-label>
+                  <input formControlName="flightArrivalDate" name="flightArrivalDate" matInput placeholder="Enter Destination DateTime">
+                  <mat-error *ngIf="f['flightArrivalDate'].errors && f['flightArrivalDate'].errors['required']">Please enter destination datetime
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+            </div><!-- </div> row 2 ends -->
+  
+            <!-- row 3 starts -->
+            <div class="row mt-2">
+              <!-- col 1 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Fare</mat-label>
+                  <input formControlName="flightFare" name="flightFare" matInput placeholder="Enter Flight Fare">
+                  <mat-error *ngIf="f['flightFare'].errors && f['flightFare'].errors['required'] ">Please enter flight fare
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <!-- col 2 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Availability</mat-label>
+                  <input formControlName="flightAvailability" name="flightAvailability" matInput placeholder="Enter Flight Avaialability">
+                  <mat-error *ngIf="f['flightAvailability'].errors && f['flightAvailability'].errors['required']">Please enter flight availability
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+            </div><!-- </div> row 3 ends -->
+  
+  
+            <!-- row 4 starts -->
+            <div class="row mt-2">
+              <!-- col 1 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Total Seats</mat-label>
+                  <input formControlName="flightTotalSeats" name="flightTotalSeats" matInput placeholder="Enter Total Seats">
+                  <mat-error *ngIf="f['flightTotalSeats'].errors && f['flightTotalSeats'].errors['required'] ">Please enter total number of seats
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <!-- col 2 -->
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Booked Seats</mat-label>
+                  <input formControlName="flightBookedSeats" name="flightBookedSeats" matInput placeholder="Enter Booked Seats">
+                  <mat-error *ngIf="f['flightBookedSeats'].errors && f['flightBookedSeats'].errors['required']">Please enter number of booked seats
+                  </mat-error>
+                </mat-form-field>
+              </div>
+  
+            </div><!-- </div> row 4 ends -->
+  
+            <mat-form-field appearance="outline">
+              <mat-label>Airline Logo URL</mat-label>
+              <input formControlName="flightLogoUrl" name="flightLogoUrl" matInput placeholder="Airline Logo URL">
+              <mat-error *ngIf="f['flightLogoUrl'].errors && f['flightLogoUrl'].errors['required']">Please enter airline logo url</mat-error>
+            </mat-form-field>
+  
+            <!-- submit -->
+            <div class="container text-center mt-4">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+  
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

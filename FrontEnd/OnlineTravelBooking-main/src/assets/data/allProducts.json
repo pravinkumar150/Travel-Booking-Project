@@ -1,0 +1,17 @@
+[{ "key":1, 
+   "title": "Air Asia", 
+    "price": 1000,
+    "imgURL": "https://www.gstatic.com/flights/airline_logos/70px/I5.png"
+},
+{ 
+    "key":2, 
+    "title": "Spicejet", 
+    "price": 2000,
+    "imgURL": "https://www.gstatic.com/flights/airline_logos/70px/SG.png"
+},
+{ 
+    "key":3, 
+    "title": "Indigo", 
+    "price": 3000,
+    "imgURL": "https://www.gstatic.com/flights/airline_logos/70px/6E.png"
+}]

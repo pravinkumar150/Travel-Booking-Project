@@ -1,0 +1,115 @@
+<div class="container mt-2">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mt-4 mb-5">
+        <mat-card>
+          <div class="container text-center">
+            <mat-icon>how_to_reg</mat-icon>
+          </div>
+          <h3 class="text-center">Register with your email and password:</h3>
+          <form (ngSubmit)="onFormSubmit()" [formGroup]="reactiveForm" class="mt-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input formControlName="userName" name="userName" matInput placeholder="Enter Name">
+              <mat-error *ngIf="f['userName'].errors && f['userName'].errors['required']">Please enter Name</mat-error>
+            </mat-form-field>
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input formControlName="userEmail" name="userEmail" type="email" matInput placeholder="Enter Email">
+                  <mat-error *ngIf="f['userEmail'].errors && f['userEmail'].errors['required'] ">Please enter Email</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Address </mat-label>
+                  <input formControlName="userAddress" name="userAddress" matInput placeholder="Enter Address">
+                  <mat-error *ngIf="f['userAddress'].errors && f['userAddress'].errors['required']">Please enter Address </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input formControlName="userPassword" name="userPassword" [type]=" hide ? 'password' : 'text'" matInput placeholder="Password">
+                  <mat-icon matSuffix (click)="hide = !hide" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <mat-error *ngIf="f['userPassword'].errors && f['userPassword'].errors['required']">Please enter Password</mat-error>
+                  <mat-error *ngIf="f['userPassword'].errors && f['userPassword'].errors['minlength']">Password must be of minimum 8 length 
+                </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Confirm Password</mat-label>
+                  <input formControlName="matchingPassword" name="matchingPassword" type="password" matInput
+                    placeholder="Confirm Password">
+                  <mat-error *ngIf="f['matchingPassword'].errors && f['matchingPassword'].errors['required']">Please enter Confirm
+                    Password</mat-error>
+                  <mat-error *ngIf="f['matchingPassword'].errors && f['matchingPassword'].errors['mustMatch']">Confirm
+                    Password did not match</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <!-- <mat-form-field appearance="outline">
+                  <mat-label>Gender</mat-label>
+                  <input formControlName="userGender" name="userGender"  matInput placeholder="Enter Gender">
+                  <mat-error *ngIf="f['userGender'].errors && f['userGender'].errors['required']">Please enter Gender</mat-error>
+                </mat-form-field> -->
+
+                <mat-form-field appearance="outline">
+                  <mat-label>Gender</mat-label>
+                  <mat-select  formControlName="userGender" name="userGender" >
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let gender of genders" [value]="gender"  matTnput >{{gender}} </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="f['userGender'].errors && f['userGender'].errors['required']">Please choose gender </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Phone No</mat-label>
+                  <input formControlName="userPhoneNo" name="userPhoneNo" matInput    placeholder="Enter Phone No" >
+                  <mat-error *ngIf="f['userPhoneNo'].errors && f['userPhoneNo'].errors['required']">Please enter Phone No</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Nation</mat-label>
+                  <mat-select  formControlName="userNation" name="userNation" >
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let country of countries" [value]="country"  matTnput >{{country}} </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="f['userNation'].errors && f['userNation'].errors['required']">Please choose Nation</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Date of Birth </mat-label>
+                  <input   formControlName="userDOB" name="userDOB"  matInput  [max]="maxDate"   [matDatepicker]="picker">
+                  <mat-error *ngIf="f['userDOB'].errors && f['userDOB'].errors['required']">Please enter DOB </mat-error>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+
+            </div>
+            <div class="container text-center mt-4">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+            <div class="container text-end mt-4">
+              <a routerLink="/login">Have an account already?</a>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>

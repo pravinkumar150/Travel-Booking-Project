@@ -1,0 +1,17 @@
+body{
+    /* background-color: #00203FFF !important; */
+    background-color: #e4d7d7;
+
+    align-items: center;
+}
+
+.mat-card {
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
+}
+
+.mat-card-subtitle {
+    font-weight: 600;
+    color: #00203FFF;
+
+}

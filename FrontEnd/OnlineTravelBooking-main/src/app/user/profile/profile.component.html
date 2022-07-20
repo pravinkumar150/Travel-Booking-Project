@@ -1,0 +1,27 @@
+<body>
+  
+
+<div class="container ">
+    <div class="row">
+      <div class="col-md-10 offset-md-1" *ngIf="(user != null)">
+        <mat-card class="card mt-5">
+            <mat-card-content>
+              <mat-card-title class="mt-3">{{ user.userName  }}  </mat-card-title>
+              <mat-card-subtitle class="mt-3" >Email : {{ user.userEmail }} </mat-card-subtitle>
+              <mat-card-subtitle>Address : {{ user.userAddress }} </mat-card-subtitle>
+              <mat-card-subtitle>Gender : {{ user.userGender }} </mat-card-subtitle>
+              <mat-card-subtitle>Contact : {{ user.userPhoneNo }} </mat-card-subtitle>
+              <mat-card-subtitle>Nation : {{ user.userNation  }} </mat-card-subtitle>
+              <mat-card-subtitle>DOB : {{ user.userDOB | date:"mediumDate" }}</mat-card-subtitle>
+              <!-- <button mat-raised-button color="primary" >Confirm</button> -->
+              <button mat-raised-button class="ml-1"   color="warn" *ngIf = "(isAdmin === 'admin')"  routerLink="/admin/flight">Go Back</button>
+              <button mat-raised-button class="ml-1"   color="warn"  *ngIf = "(isAdmin === 'user')" routerLink="/travel/flight">Go Back</button>
+              <!-- <button mat-raised-button class="ml-2"   color="warn" routerLink="/travel/flight">Edit</button> -->
+
+            </mat-card-content>
+          </mat-card>
+      </div>
+    </div>
+  </div>  
+
+</body>

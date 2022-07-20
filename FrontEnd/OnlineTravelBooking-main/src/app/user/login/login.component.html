@@ -1,0 +1,45 @@
+<div class="container mt-2">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mt-4 mb-5">
+  
+        <mat-card>
+          <div class="container text-center">
+            <mat-icon>account_circle</mat-icon>
+            <h3>Login</h3>
+          </div>
+  
+          <form class="mt-4" (ngSubmit)="loginFormSubmit()">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input [(ngModel)]="userLoginData.userEmail" required name="userEmail" type="email" required matInput
+                placeholder="Enter Email">
+            </mat-form-field>
+  
+  
+            <div class="col-md-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input [(ngModel)]="userLoginData.userPassword" required name="userPassword" type="password" required matInput
+                  placeholder="Password">
+              </mat-form-field>
+              <div class="col-md-12">
+                <a (click) = "passwordReset()" auto-focus >Forgot Password? </a>
+              </div>
+            </div>
+     
+            <div class="container text-center mt-4">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+            
+  
+    
+            <div class="container text-end mt-4">
+              <a routerLink="/register">Don't have an account?</a>
+            </div>
+  
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

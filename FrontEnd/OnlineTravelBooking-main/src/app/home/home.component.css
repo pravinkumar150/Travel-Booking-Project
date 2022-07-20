@@ -1,0 +1,27 @@
+.home-container {
+    background-image: url(../../assets/images/home.jpg);
+    background-size: cover;
+    min-height: 100%;
+  }
+  
+  .community-content {
+    color: #fff;
+    margin-top: 20vh;
+    padding-left: 50px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  @media screen and (max-width:500px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .community-content {
+      margin-top: 10vh;
+    }
+  
+  }
+  
