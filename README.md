@@ -6,12 +6,12 @@ All-in-one Travel Booking App According to a report published by US Travel Assoc
 
 ## **Technologies Used**
 
-* ### Spring Boot - version 4.0.0
+* ### Spring Boot - version 2.7.1
 * ### Java  - version 17
 * ### MySQL - version 8.1.2
-* ### Hibernate - version 6.0
-* ### Angular - version 8
+* ### Angular - version 14
 * ### Spring Data JPA - version 2.1
+* ### Razor pay - version 1.4.3
 
 ## **Features**
 
