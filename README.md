@@ -12,6 +12,7 @@ All-in-one Travel Booking App According to a report published by US Travel Assoc
 * ### Angular - version 14
 * ### Spring Data JPA - version 2.1
 * ### Razor pay - version 1.4.3
+* ### Spring email - version 2.5.6
 
 ## **Features**
 
